@@ -2,7 +2,7 @@ var hasTyped = false;
 var time = $('#time');
 var input = $('#typing');
 var speedLabel = $('#speed');
-var speed;
+var speedWords, speedChars;
 
 if (!hasTyped) {
     time.text("Comece a digitar para iniciarmos o cronômetro");
@@ -21,7 +21,9 @@ input.keyup(function (e){
             setInterval(function () {
                 seconds += 0.01;
                 time.text("Tempo: " + seconds.toFixed(2) + "s");
-                speed = getTotalWords() / seconds;
+                speedWords = getTotalWords(input.val()) / seconds;
+                speedChars = getTotalChars(input.val()) / seconds;
+                speedLabel.html("Velocidade média: <br>" + speedWords.toFixed(2) + " palavras/s e " + speedChars.toFixed(2) + " caractere/s");
             }, 10);
     }
     hasTyped = true;
@@ -35,6 +37,5 @@ function stopTimer(finish){
         $('#clear').addClass('complete-btn').prop('disabled', true);
         $('#restart').addClass('complete-btn');
         input.prop('disabled', true);
-        speedLabel.text("Velocidade média: " + speed.toFixed(2) + " palavras/s");
     }
 }
