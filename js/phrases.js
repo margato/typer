@@ -6,7 +6,7 @@ var phrases = [
     'Imagina um cara sendo acusado de suicídio, e não tinha sido ele o assassino, o que a família do moço quer? Que ele seja morto!',
     'Mas é tudo criptografado, com... 526 terabytes de encription, pá ninguém entender o que é trivial',
     'SWAT, Los Angeles, Estados Unidos.',
-    'Fiz um baguncinha dentro da California, mandei quass mil bandido pro caixão.'
+    'Fiz uma baguncinha dentro da Califórnia, mandei quass mil bandido pro caixão.'
 ];
 
 
