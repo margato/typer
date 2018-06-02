@@ -52,6 +52,7 @@ cite{
 
 #type{
     clear: both;
+    margin-top: 15px;
 }
 
 .type-area{
@@ -76,14 +77,20 @@ cite{
     box-shadow: none !important;
 }
 
+.change-phrase{
+    float: right;
+}
+
+#change-p{
+}
+
 .btn-change:hover{
     background: #f5f759;
 }
 
 .btn-change{
-    float: right !important;
+    float: right;
     background: #F7D002;
-    margin-left: 10px;
 }
 
 .btn-restart, .btn-clear{
@@ -103,6 +110,8 @@ cite{
 }
 
 #phrase{
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: justify;
 }
 

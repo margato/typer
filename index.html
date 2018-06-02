@@ -25,8 +25,12 @@
         <div class="d-flex align-items-center flex-column justify-content-center h-100">
             <h1 id="title" class="mt-5">Typer!</h1>
             <div class="game">
-                <h5>Digite <b>exatamente</b> a frase abaixo o mais rápido possível:</h5>
-                <button id="change" class="btn btn-change">trocar frase</button>
+                <h5>Digite <b>exatamente</b> a frase abaixo o mais rápido possível:
+                    <div class="btn-group change-phrase" role="group" aria-label="Basic example">
+                        <button data-toggle="tooltip" data-placement="top" title="Frase anterior" id="left" class="btn btn-change"><i class="fas fa-arrow-left"></i></button>
+                        <button data-toggle="tooltip" data-placement="top" title="Próxima frase" id="right" class="btn btn-change"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </h5>
                 <div id="phrase">
                     <blockquote>
                         <span class="quote">"</span><span id="type"></span><span class="quote">"</span>
@@ -39,8 +43,8 @@
                 <p id="time">Tempo:</p>
                 <textarea autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" class="form-control type-area" id="typing" placeholder="Digite aqui"></textarea>
                 <div class="btn-group buttons" role="group" aria-label="Basic example">
-                    <button id="restart" type="button" class="btn btn-restart" data-toggle="tooltip" data-placement="bottom" title="Reinicie com a mesma frase"><i class="fas fa-redo"></i></button>
-                    <button id="clear" type="button" class="btn btn-clear" data-toggle="tooltip" data-placement="bottom" title="Limpe a caixa de texto"><i class="fas fa-broom"></i></button>
+                    <button id="restart" type="button" class="btn btn-restart" data-toggle="tooltip" data-placement="top" title="Reinicie com a mesma frase"><i class="fas fa-redo"></i></button>
+                    <button id="clear" type="button" class="btn btn-clear" data-toggle="tooltip" data-placement="top" title="Limpe a caixa de texto"><i class="fas fa-broom"></i></button>
                 </div>
                 <p id="speed"></p>
                 <h5 id="tips">Dica: Letras maíusculas/minúsculas não influenciam na verificação, sinais de pontuação e acentuação sim!</h5>

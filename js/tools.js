@@ -8,6 +8,10 @@ clear.click(function(){
 });
 
 restart.click(function(){
+    restartGame();
+});
+
+function restartGame(){
     input.val("");
     seconds = 0;
     console.log('game restarted');
@@ -20,4 +24,5 @@ restart.click(function(){
     clear.prop('disabled', false);
     input.prop('disabled', false);
     hasTyped = false;
-});
+    speedLabel.text("");
+}

@@ -1,20 +1,24 @@
-var phrase;
-var words;
+var phrase = $('#type');
 
 
 
 function countWords(){
     var word;
-    phrase = $('#type').text();
-    words = phrase.split(" ");
-
-    if (getTotalWords() === 1)
+    if (getTotalWords(phrase.text()) === 1)
         word = "palavra";
     else
         word = "palavras";
-    $('#words').text(words.length + " " + word);
+    $('#words').text(getTotalWords(phrase.text()) + " " + word + " e " + getTotalChars(phrase.text()) + " caracteres");
 }
 
-function getTotalWords(){
+
+function getTotalWords(input){
+    var words = input.split(" ");
     return words.length;
+}
+
+function getTotalChars(input){
+    for (var i = 0; i < input.length; i++) {
+    }
+    return i;
 }
