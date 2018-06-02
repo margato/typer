@@ -1,5 +1,5 @@
 var phrases = [
-    'Paes é o prefeito mais feliz do mundo, que dirige a cidade mais importante do mundo e da galáxia. Por que da galáxia? Porque a galáxia é o Rio de Janeiro. A via Láctea é fichinha perto da galáxia que o nosso querido Eduardo Paes tem a honra de ser prefeito',
+    'Paes é o prefeito mais feliz do mundo, que dirige a cidade mais importante do mundo e da galáxia. Por que da galáxia? Porque a galáxia é o Rio de Janeiro. A via Láctea é fichinha perto da galáxia que o nosso querido Eduardo Paes tem a honra de ser prefeito.',
     'Comprar alimento. É, ué!',
     'Faz tempo. É, ué. Não, por causo de ser ator e ser acusado e ser acusado pelos pensamentos que se fala as perguntas erradas.',
     'Quero dizer para vocês que, de fato, Roraima é a capital mais distante de Brasília, mas eu garanto para vocês que essa distância, para nós do Governo Federal, só existe no mapa. E aí eu me considero hoje uma roraimada, roraimada, no que prova que eu estou bem perto de vocês.',
@@ -22,17 +22,30 @@ var author = [
 ];
 
 var randomIndex = Math.floor(Math.random() * phrases.length);
+var left = $('#left');
+var right = $('#right');
 
 function setPhrase(){
     $('cite').text(author[randomIndex]);
     $('#type').text(phrases[randomIndex]);
 }
 
-$('#change').click(function(){
+right.click(function(){
     if (randomIndex === phrases.length - 1)
         randomIndex = 0;
     else
         randomIndex += 1;
+    restartGame();
+    setPhrase();
+    countWords();
+});
+
+left.click(function(){
+    if (randomIndex === 0)
+        randomIndex = phrases.length - 1;
+    else
+        randomIndex -= 1;
+    restartGame();
     setPhrase();
     countWords();
 });
