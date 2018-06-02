@@ -1,0 +1,155 @@
+/*
+F7D002 yellow
+01172F blue
+*/
+body{
+    font-family: 'Inconsolata', monospace;
+    background: #01172F;
+    color: #F7D002;
+}
+
+.quote{
+    color: #F7D002;
+    content: "\201C";
+}
+
+#tips{
+    text-align: left;
+    margin: 10px;
+    margin-left: 0;
+    color: white;
+    font-size: 1em;
+    clear: both;
+}
+
+footer{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+#heart{
+    color: #b51004;
+}
+
+cite{
+    opacity: 0.2;
+}
+
+#title{
+    font-family: 'Press Start 2P', monospace;
+    font-weight: bold;
+    text-shadow: 0px 5px 0px #b4920b;
+    text-transform: lowercase;
+    margin: 50px;
+    text-align: center;
+}
+
+.buttons{
+    margin-bottom: 10px;
+    float: right;
+}
+
+#type{
+}
+
+.type-area{
+    border: 1px solid #F7D002 !important;
+    color: #F7D002;
+    resize: none;
+    height: 6em;
+    word-wrap: break-word;
+    font-size: 1em;
+    background: transparent;
+    border-bottom-right-radius: 0;
+}
+
+.btn-restart:hover, .btn-clear:hover{
+    background: #f5f759;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.btn-restart, .btn-clear{
+    color: black;
+    background: #F7D002;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+#game{
+    height: 100vh;
+}
+
+.game{
+    width: 100%;
+    overflow: auto !important;
+}
+
+#phrase{
+    text-align: justify;
+}
+
+#words, #phrase, #time{
+    color: white;
+}
+
+.form-control:focus {
+    color: #F7D002;
+    background: transparent;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.form-control::-webkit-input-placeholder {
+    color: #F7D002;
+}
+
+
+.form-control:-moz-placeholder {
+    color: #F7D002;
+}
+
+
+.form-control::-moz-placeholder {
+    color: #F7D002;
+}
+
+
+.form-control:-ms-input-placeholder {
+    color: #F7D002;
+}
+
+
+.form-control::-ms-input-placeholder {
+    color: #F7D002;
+}
+
+#speed{
+    color: #F7D002;
+}
+
+.complete-btn:hover{
+    color: black !important;
+    background: #12853a !important;
+    border: 1px solid #156f37 !important;
+}
+
+.complete{
+    background: #1ad95b !important;
+    border: 1px solid #1eb851 !important;
+    color: black !important;
+}
+
+.complete-btn{
+    color: black !important;
+    background: #139c42 !important;
+    border: 1px solid #11672e !important;
+}

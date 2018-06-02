@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="icon" href="/resources/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
+    <link rel="manifest" href="/resources/site.webmanifest">
+    <link rel="mask-icon" href="/resources/safari-pinned-tab.svg">
+    <title>typer!</title>
+</head>
+<body>
+<section id="game">
+    <div class="container">
+        <div class="d-flex align-items-center flex-column justify-content-center h-100">
+            <h1 id="title" class="mt-5">Typer!</h1>
+            <div class="game">
+                <h5>Digite o mais rápido possível:</h5>
+                <div id="phrase">
+                    <blockquote>
+                        <span class="quote">"</span><span id="type"></span><span class="quote">"</span>
+                        <br><br>
+                        <cite></cite>
+                    </blockquote>
+                </div>
+                <h5>Estatísticas:</h5>
+                <p id="words">Palavras:</p>
+                <p id="time">Tempo:</p>
+                <textarea autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" class="form-control type-area" id="typing" placeholder="Digite aqui"></textarea>
+                <div class="btn-group buttons" role="group" aria-label="Basic example">
+                    <button id="restart" type="button" class="btn btn-restart" data-toggle="tooltip" data-placement="bottom" title="Reinicie com a mesma frase"><i class="fas fa-redo"></i></button>
+                    <button id="clear" type="button" class="btn btn-clear" data-toggle="tooltip" data-placement="bottom" title="Limpe a caixa de texto"><i class="fas fa-broom"></i></button>
+                </div>
+                <p id="speed"></p>
+                <h5 id="tips">Dica: Letras maíusculas/minúsculas não influenciam na verificação, sinais de pontuação e acentuação sim!</h5>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>created with <span id="heart">❤</span> by <a href="https://github.com/Margato">Margato</a></p>
+    </footer>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
