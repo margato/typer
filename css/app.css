@@ -51,6 +51,7 @@ cite{
 }
 
 #type{
+    clear: both;
 }
 
 .type-area{
@@ -73,6 +74,16 @@ cite{
 .btn.focus, .btn:focus {
     outline: 0;
     box-shadow: none !important;
+}
+
+.btn-change:hover{
+    background: #f5f759;
+}
+
+.btn-change{
+    float: right !important;
+    background: #F7D002;
+    margin-left: 10px;
 }
 
 .btn-restart, .btn-clear{

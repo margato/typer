@@ -1,15 +1,20 @@
-var phrase = $('#type').text();
-var words = phrase.split(" ");
+var phrase;
+var words;
 
-function getTotalWords(){
-    return words.length;
-}
+
 
 function countWords(){
     var word;
+    phrase = $('#type').text();
+    words = phrase.split(" ");
+
     if (getTotalWords() === 1)
         word = "palavra";
     else
         word = "palavras";
     $('#words').text(words.length + " " + word);
+}
+
+function getTotalWords(){
+    return words.length;
 }

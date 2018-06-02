@@ -27,3 +27,12 @@ function setPhrase(){
     $('cite').text(author[randomIndex]);
     $('#type').text(phrases[randomIndex]);
 }
+
+$('#change').click(function(){
+    if (randomIndex === phrases.length - 1)
+        randomIndex = 0;
+    else
+        randomIndex += 1;
+    setPhrase();
+    countWords();
+});
