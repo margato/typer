@@ -115,6 +115,16 @@ cite{
     text-align: justify;
 }
 
+#tip
+
+#time{
+    float: left;
+}
+
+#misses{
+    color: #de0f21;
+}
+
 #words, #phrase, #time{
     color: white;
 }
@@ -167,6 +177,17 @@ cite{
     border: 1px solid #1eb851 !important;
     color: black !important;
 }
+
+.doingFine{
+    border: 1px solid #1eb851 !important;
+    color: #1eb851 !important;
+}
+
+.wrong{
+    border: 1px solid #b80e1e !important;
+    color: #b80e1e !important;
+}
+
 
 .complete-btn{
     color: black !important;

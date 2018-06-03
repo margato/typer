@@ -5,6 +5,8 @@ var time = $('#time');
 
 clear.click(function(){
     input.val("");
+    input.removeClass("doingFine");
+    input.removeClass("wrong");
 });
 
 restart.click(function(){
@@ -25,4 +27,6 @@ function restartGame(){
     input.prop('disabled', false);
     hasTyped = false;
     speedLabel.text("");
+    input.removeClass("doingFine");
+    input.removeClass("wrong");
 }

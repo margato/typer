@@ -41,13 +41,14 @@
                 <h5>Estatísticas:</h5>
                 <p id="words"></p>
                 <p id="time">Tempo:</p>
+                <!--<p id="misses">Erros: <span id="misses-qnt">0</span></p>-->
                 <textarea autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" class="form-control type-area" id="typing" placeholder="Digite aqui"></textarea>
                 <div class="btn-group buttons" role="group" aria-label="Basic example">
                     <button id="restart" type="button" class="btn btn-restart" data-toggle="tooltip" data-placement="top" title="Reinicie com a mesma frase"><i class="fas fa-redo"></i></button>
                     <button id="clear" type="button" class="btn btn-clear" data-toggle="tooltip" data-placement="top" title="Limpe a caixa de texto"><i class="fas fa-broom"></i></button>
                 </div>
                 <p id="speed"></p>
-                <h5 id="tips">Dica: Letras maíusculas/minúsculas não influenciam na verificação, sinais de pontuação e acentuação sim!</h5>
+                <h5 id="tips"><span id="tip"></span></h5>
             </div>
         </div>
     </div>
