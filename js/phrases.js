@@ -48,7 +48,6 @@ function setTip(){
     tip.html(tips[i]);
     setInterval(function(){
         i++;
-        console.log(i);
         if (i == tips.length)
             i = 0;
         tip.html(tips[i]);

@@ -1,6 +1,6 @@
 var phrase = $('#type');
 
-
+countWords();
 
 function countWords(){
     var word;

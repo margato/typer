@@ -1,26 +1,24 @@
+var modules = [
+    'js/phrases.js',
+    'js/timer.js',
+    'js/countWords.js',
+    'js/tools.js'
+];
+
 $(document).ready(function() {
-    $(function() {
-        $.getScript('js/phrases.js', function() {
-            logModule('phrases.js');
-            setPhrase();
-        });
-
-        $.getScript('js/timer.js', function() {
-            logModule('timer.js');
-        });
-
-        $.getScript('js/countWords.js', function() {
-            logModule('countWords.js');
-            countWords();
-        });
-
-        $.getScript('js/tools.js', function() {
-            logModule('tools.js');
-        });
-    });
-
     $('[data-toggle="tooltip"]').tooltip();
-
+    $.when(
+        $.getScript(modules[0], function (e) {
+            setPhrase();
+            logModule(modules[0].replace('.js', '').replace('js/', ''));
+        })
+    ).done(function(){
+        var i;
+        for (i = 1; i < modules.length; i++){
+            $.getScript(modules[i]);
+            logModule(modules[i].replace('.js', '').replace('js/', ''));
+        }
+    });
 });
 
 function logModule(module){
