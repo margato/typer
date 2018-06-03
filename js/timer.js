@@ -2,7 +2,7 @@ var hasTyped = false;
 var time = $('#time');
 var input = $('#typing');
 var speedLabel = $('#speed');
-var speedWords, speedChars;
+var speedWords, speedChars, misses = 0;
 
 if (!hasTyped) {
     time.text("Comece a digitar para iniciarmos o cronômetro");
@@ -12,6 +12,7 @@ var seconds = 0;
 var counting;
 
 input.keyup(function (e){
+    checkInput(e);
     if (input.val().toLowerCase() === phrases[randomIndex].toLowerCase()) {
         stopTimer(true);
     }
@@ -29,6 +30,27 @@ input.keyup(function (e){
     hasTyped = true;
 });
 
+function checkInput(e){
+    var typed = input.val().toLowerCase();
+    var textToCompare = phrases[randomIndex].toLowerCase();
+    if (typed == ''){
+        input.removeClass("doingFine");
+        input.removeClass("wrong");
+    }
+    if (textToCompare.startsWith(typed) && typed != ''){
+        input.addClass("doingFine");
+        input.removeClass("wrong");
+    }
+    if (!textToCompare.startsWith(typed) && typed != ''){
+        //if(e.keyCode != 8)
+        //    misses++;
+        input.addClass("wrong");
+        input.removeClass("doingFine");
+        $('#misses-qnt').text(misses);
+    }
+}
+
+
 function stopTimer(finish){
     clearInterval(counting);
     if (finish) {
@@ -37,5 +59,7 @@ function stopTimer(finish){
         $('#clear').addClass('complete-btn').prop('disabled', true);
         $('#restart').addClass('complete-btn');
         input.prop('disabled', true);
+        input.removeClass("doingFine");
+        input.removeClass("wrong");
     }
 }
